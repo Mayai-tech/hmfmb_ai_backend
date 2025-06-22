@@ -7,6 +7,9 @@ import os
 from supabase import create_client, Client
 
 app = FastAPI()
+@app.get("/")
+def read_root():
+    return {"message": "H.M.F.M.B. Ai Backend is live and connected!"}
 
 # --- CORS Configuration ---
 origins = ["*"] # Allowing all origins for hackathon simplicity
